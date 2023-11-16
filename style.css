@@ -1,0 +1,248 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: "Poppins", sans-serif;
+  --bg-body: hsl(0, 0%, 0%);
+}
+
+body {
+  font-size: 1.6rem;
+  color: #fff;
+  background: var(--bg-body);
+}
+
+body,
+input,
+button {
+  font-family: var(--ff-primary);
+}
+
+/* OCULTAR LABEL */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#page {
+  width: 102.4rem;
+  margin: 11.5rem auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+
+.search {
+  width: 64rem;
+  display: flex;
+  gap: 8px;
+}
+
+#input-search {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #06181c;
+  flex: 1;
+  padding: 1.6rem;
+}
+
+#input-search:focus-visible {
+  outline: 2px solid #065e7c;
+}
+
+#input-search::placeholder {
+  color: #7c7c8a;
+}
+
+/* Botón Favoritar */
+.favorites {
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  border-radius: 0.5rem;
+  background: #065e7c;
+  padding: 1.2rem 3.2rem;
+  transition: background 0.6s;
+  cursor: pointer;
+}
+
+/* Hover botón */
+.favorites:hover {
+  color: #065e7c;
+  background: #fff;
+}
+
+/* Hover SVG dentro del botón */
+.favorites:hover svg path {
+  fill: #065e7c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  background: #092d38;
+}
+
+table thead th {
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  text-align: left;
+}
+
+table th:nth-child(1) {
+  width: 50rem;
+  text-align: left;
+}
+
+tbody {
+  display: block;
+  overflow-y: scroll;
+  max-height: 37.6rem;
+  width: 100%;
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+tbody td {
+  text-align: left;
+  padding: 24px 24px 24px 40px;
+  font-size: 2rem;
+}
+
+tr {
+  display: flex;
+  align-items: center;
+}
+
+tr th:first-child {
+  width: 40%;
+}
+
+tr td:first-child {
+  width: 40%;
+}
+
+tr td,
+tr th {
+  width: 20%;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.user img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 5.6rem;
+  object-fit: cover;
+}
+
+td.user a {
+  text-decoration: none;
+  color: #e1e1e6;
+}
+
+/* Todos los PARES */
+tbody tr:nth-child(even) {
+  background-color: #06181c;
+  border: 1px solid #4a808c;
+}
+
+/* Todos los IMPARES */
+tbody tr:nth-child(odd) {
+  background: rgba(6, 22, 27, 0.5);
+}
+
+.remove {
+  border: none;
+  background: transparent;
+  color: #f75a68;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.remove:hover {
+  color: #d72a39;
+}
+
+/* DIV CUANDO LA TABLA ESTÁ VACÍA */
+.empty-state {
+  width: 100%;
+  min-height: 62.4rem;
+  background: #030b0d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+.empty-state svg {
+  width: 13.2rem;
+  height: 12.5rem;
+}
+
+.empty-state p {
+  color: #4e5455;
+  font-size: 4rem;
+  line-height: 2.5rem;
+}
+
+/* Ocultando DIV vacía. */
+.hide {
+  display: none;
+}
+
+.table {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #4a808c;
+  overflow: hidden;
+}
+
+tbody::-webkit-scrollbar {
+  width: 7px;
+  background: #06181c;
+}
+
+tbody::-webkit-scrollbar-thumb {
+  background: #4a808c;
+  border-radius: 10px;
+}
+
+tbody::-webkit-scrollbar-track {
+  margin-block-end: 8px;
+  margin-block-start: 4px;
+}
